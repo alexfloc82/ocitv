@@ -4,7 +4,9 @@
         <title>Ocitv - Tareas</title>
         <?php include "head.php" ?>
         <script src="script/tareas.js"></script>
-        <style>.ui-autocomplete { z-index:2147483647; }</style>
+        <style>.ui-autocomplete { z-index:2147483647; }
+        .modal-lg {width: 80%;}
+        </style>
     </head>
 
     <body>
