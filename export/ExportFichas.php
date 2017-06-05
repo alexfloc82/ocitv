@@ -28,7 +28,15 @@ foreach ($obj as $item) {
         if(isset($item->revisado)){array_push($flatData, $item->revisado);}else{array_push($flatData, "0");}
         if(isset($item->revisor)){array_push($flatData, $item->revisor);}else{array_push($flatData, "");}
         if(isset($item->edicion)){array_push($flatData, $values[0]->edicion->{$item->edicion});}else{array_push($flatData, "");}
-        fputcsv($output, $flatData);
+        
+        //datos de las fichas
+        foreach ($item->fichas as $ficha){
+            $flatDataFicha = array();
+            $flatDataFicha = $flatData;
+            if(isset($ficha->title)){array_push($flatDataFicha, $ficha->title);}else{array_push($flatDataFicha, "");}
+            
+            fputcsv($output, $flatDataFicha);
+        }
 }
 
 fclose($output);
