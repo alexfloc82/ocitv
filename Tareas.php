@@ -29,6 +29,8 @@
                             </select>
                         </div>
                         <button type="submit"  class="btn btn-info" ng-click="control.search()">Buscar</Button>
+                        <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportTareas.php'">Exportar</Button>
+                        <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportFichas.php'">Exportar Ficha</Button>
                     </form>
                 </div>
                 <!-- Main-->
@@ -330,7 +332,7 @@
                                                                                 <tr><th>Localidad</th><th></th></tr>
                                                                             </thead> 
                                                                             <tbody>
-                                                                                <tr ng-repeat="local in selectedFicha.loc">
+                                                                                <tr ng-repeat="local in selectedFicha.local">
                                                                                     <td>
                                                                                         <input type="text" class="form-control text" ng-model="local.localidad" my-localisation ng-disabled="selectedFicha.terminado">
                                                                                     </td>
@@ -346,7 +348,7 @@
                                                                                
                                                                             </tbody>
                                                                         </table>
-                                                                        <div ng-if="(selectedFicha.loc.length < 3||selectedFicha.loc==undefined)&& !selectedFicha.terminado"><button type="button" class="btn btn-info" ng-click="Tareas.addElem(selectedFicha.loc)">Añadir lugar</button></div>
+                                                                        <div ng-if="(selectedFicha.local.length < 3||selectedFicha.local==undefined)&& !selectedFicha.terminado"><button type="button" class="btn btn-info" ng-click="Tareas.addElem(selectedFicha.local)">Añadir lugar</button></div>
                                                                 
                                                                     </div>
                                                                 </div>
