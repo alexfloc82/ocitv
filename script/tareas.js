@@ -42,7 +42,7 @@ angular.module('tareaApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
                     var ficha = response.data[key].fichas;
                     $.each(ficha,function(k, v){
                         var dque = v.dques;
-                        var local = v.loc;
+                        var local = v.local;
                         var quien = v.dquienes;
                         $.each(dque, function(k1,v1){
                             if($.inArray(v1.etiqueta, availableTags) < 0 && v1.etiqueta != undefined){
@@ -98,6 +98,9 @@ angular.module('tareaApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
                 delete postobj.fichas[key].$$hashKey;
                 $.each(postobj.fichas[key].loc,function(k,val){
                     delete postobj.fichas[key].loc[k].$$hashKey;
+                });
+                $.each(postobj.fichas[key].local,function(k,val){
+                    delete postobj.fichas[key].local[k].$$hashKey;
                 });
                 $.each(postobj.fichas[key].quienes,function(k,val){
                     delete postobj.fichas[key].quienes[k].$$hashKey;
@@ -156,6 +159,7 @@ angular.module('tareaApp', ['ngAnimate', 'ngSanitize', 'ui.bootstrap'])
             var newFicha={
                 title:"Nuevo titular",
                 loc:[],
+                local:[],
                 dques:[],
                 dquienes:[],
                 quienes:[]
