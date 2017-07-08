@@ -29,8 +29,10 @@
                             </select>
                         </div>
                         <button type="submit"  class="btn btn-info" ng-click="control.search()">Buscar</Button>
+                         <?php if($_SESSION['perfil']>40){?>
                         <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportTareas.php'">Exportar</Button>
                         <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportFichas.php'">Exportar Ficha</Button>
+                         <?php if($_SESSION['perfil']>40){?>
                     </form>
                 </div>
                 <!-- Main-->
