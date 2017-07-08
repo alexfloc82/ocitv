@@ -16,7 +16,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Xolomon</title>
+        <title>Ocitv</title>
         <?php include "head.php"; ?>
     </head>
     <body>
