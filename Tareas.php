@@ -29,8 +29,8 @@
                             </select>
                         </div>
                         <button type="submit"  class="btn btn-info" ng-click="control.search()">Buscar</Button>
-                        <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportTareas.php'">Exportar</Button>
-                        <button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportFichas.php'">Exportar Ficha</Button>
+                        <!--<button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportTareas.php'">Exportar</Button>-->
+                        <?php if($_SESSION['perfil']>40){?><div></div><button type="button"  class="btn btn-info" onclick="window.location.href='export/ExportFichas.php'">Exportar Ficha</Button><?php } ?>
                     </form>
                 </div>
                 <!-- Main-->
